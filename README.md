@@ -1,2 +1,3 @@
-# fnope
-Coming soon: Code for the preprint "FNOPE: Simulation-based inference on function spaces with Fourier Neural Operators"
+# Fourier Neural Operators for Posterior Estimation (FNOPE)
+
+This repository is a work in progress. Code and documentation will be added soon.
