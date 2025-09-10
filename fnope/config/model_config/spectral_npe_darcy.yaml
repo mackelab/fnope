@@ -1,0 +1,32 @@
+name: spectral_NPE
+
+
+#data representation
+data_representation: "fourier" # "fourier" or "raw", only used for theta atm!
+n_fft_modes: 16 # number of fourier modes to use
+pad_width: None # dealing is automatically for 2d 
+
+
+#model config
+method: "npe" # "npe" 
+
+#embedding config
+embedding: "cnn" # "cnn" or "fc"
+
+# for fc
+# embedding_dim: 50
+# embedding_num_layers: 3
+# embedding_hidden_dim: 80
+
+# for cnn
+embedding_dim: 100
+num_conv_layers: 4
+num_linear_layers: 4
+num_linear_units: 100
+kernel_size: 5
+out_channels_per_layer: [6,12,24,24]
+pool_kernel_size: 2
+
+
+# optimization
+batch_size: 200

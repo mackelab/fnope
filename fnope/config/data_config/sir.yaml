@@ -1,0 +1,4 @@
+name: sir
+data_path: 'sir'
+likelihood_scale: 0.05
+n_train: 1000 # choose one of 1000, 10000, 100000

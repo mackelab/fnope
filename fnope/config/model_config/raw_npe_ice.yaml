@@ -1,0 +1,25 @@
+name: raw_NPE
+
+
+#data representation
+data_representation: "raw" # "fourier" or "raw", only used for theta atm!
+n_fft_modes: 10 # number of fourier modes to use
+pad_width: 20
+
+
+#model config
+method: "npe"
+
+#embedding config
+embedding: "cnn" # "cnn" or "fc"
+embedding_dim: 50
+num_conv_layers: 2
+num_linear_layers: 2
+num_linear_units: 50
+kernel_size: 5
+out_channels_per_layer: [6,12]
+pool_kernel_size: 2
+
+
+# optimization
+batch_size: 200

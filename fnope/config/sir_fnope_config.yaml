@@ -1,0 +1,20 @@
+
+workspace: local
+
+# Output directory for results
+hydra:
+  run:
+    dir: ${out_dir}/${data_config.name}/${model_config.name}/debug
+
+  output_subdir: .
+
+defaults:
+  - /base_paths
+  - data_config: sir
+  - model_config: fnope_sir
+  - evaluation_config: sir
+  - launcher: local
+  - partition: none
+  - sweep: sir_fnope_sweep #uncomment when launching multirun jobs
+  - _self_ # primary config file (THIS) overrides the default config files
+

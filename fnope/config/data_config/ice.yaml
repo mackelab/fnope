@@ -1,0 +1,51 @@
+name: ice
+experiment_name: ice
+param_train_path: sbi_ice/all_mbs_final.pkl
+observation_train_path: sbi_ice/all_layers_final.pkl
+test_data: sbi_ice/real_layers.csv
+gt_inference_path: sbi_ice/sbi_sims/posteriors/all_final/layer_1_seed_100
+n_test_holdout: 1000 #huge amount of training data so hold out from this for validation
+n_train: 10000 # if n_train<0: use all available training data.
+
+
+simulator:
+  setup_file: sbi_ice/setup_file.csv
+  layer_bounds_file: sbi_ice/layer_bounds.pkl
+  layer_idx: 1 #If you change this, remember to change gt_inference_path
+
+  grid:
+    name: middle
+    noisy: True
+    layer_sparsity: 1
+    smb_sparsity: 10
+
+  iso_hparams:
+    nx_iso: 500
+    ny_iso: 1
+    init_layers: 10
+
+  prior:
+    GP_mean_mu: 0.5
+    GP_mean_sd: 0.25
+    GP_var_min: 0.1
+    GP_var_max: 0.3
+    length_scale: 2.5E+3
+    nu: 2.5
+
+  scheds:
+    sched1: 
+      sim_time : 500
+      dt : 0.5
+      n_iter_surface : 25
+      n_iter_base : 100
+    sched2: 
+      sim_time : 500
+      dt : 0.5
+      n_iter_surface : 2
+      n_iter_base : 20
+
+
+
+
+defaults:
+  - _self_

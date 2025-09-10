@@ -1,0 +1,29 @@
+name: raw_FMPE
+
+#data representation
+data_representation: "raw" # "fourier" or "raw", only used for theta atm!
+n_fft_modes: 50 # not used for "raw" but keep for config
+pad_width: 200 # not used for "raw" but keep for config
+
+#model config
+method: "fmpe"
+model_type: "mlp"
+num_blocks: 8 #only used for resnet
+num_layers: 8 #only used for mlp
+hidden_features: 256
+num_freqs: 32
+
+
+#embedding config
+embedding: "cnn" # "cnn" or "fc"
+embedding_dim: 100
+num_conv_layers: 4
+num_linear_layers: 4
+num_linear_units: 100
+kernel_size: 5
+out_channels_per_layer: [6,12,24,24]
+pool_kernel_size: 2
+
+# optimization
+batch_size: 200
+learning_rate: 1e-4

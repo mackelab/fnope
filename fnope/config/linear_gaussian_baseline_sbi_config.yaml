@@ -1,0 +1,19 @@
+workspace: local
+
+# Output directory for results
+hydra:
+  run:
+    dir: ${out_dir}/${data_config.name}/${model_config.name}/debug
+
+  output_subdir: .
+
+defaults:
+  - /base_paths
+  - data_config: linear_gaussian
+  - model_config: spectral_fmpe_linear_gaussian
+  - evaluation_config: linear_gaussian
+  - launcher: local
+  - partition: none
+  - sweep: linear_gaussian_baseline_sbi_sweep #uncomment when launching multirun jobs
+  - _self_ # primary config file (THIS) overrides the default config files
+

@@ -1,0 +1,9 @@
+name: linear_gaussian
+data_path: 'linear_gaussian'
+train_data: 'linear_gaussian_0_005_train.pkl'
+test_data: 'linear_gaussian_0_005_test.pkl'
+experiment_name: 'linear_gaussian'
+n_train: 10000 # if n_train<0: use all available training data. 
+
+defaults:
+  - _self_

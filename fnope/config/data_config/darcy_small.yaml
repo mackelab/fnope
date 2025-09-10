@@ -1,0 +1,11 @@
+name: darcy
+data_path: 'darcy'
+train_data: 'darcy_small_train.pkl'
+test_data: 'darcy_small_test.pkl'
+experiment_name: 'darcy'
+n_train: 2000 # if n_train<0: use all available training data. 
+pointwise_snr: 5.0
+
+
+defaults:
+  - _self_

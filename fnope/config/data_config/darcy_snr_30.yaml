@@ -1,0 +1,17 @@
+name: darcy_snr_30
+data_path: 'darcy'
+train_data: 'darcy_v0_train_snr_30.pkl'
+test_data: 'darcy_v0_test_snr_30.pkl'
+experiment_name: 'darcy'
+n_train: 100 # if n_train<0: use all available training data. 
+
+
+#prior parameters
+snr: 30.0
+tau: 9.0
+alpha: 2.0
+prior_scale: 1000.0
+
+
+defaults:
+  - _self_

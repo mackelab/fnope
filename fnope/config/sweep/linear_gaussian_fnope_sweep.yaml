@@ -1,0 +1,23 @@
+# @package _global_
+name: linear_gaussian_experiment
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model_config: fnope_linear_gaussian
+      model_config.always_equispaced: False, True
+      data_config.n_train: 100,1000,10000,100000
+      +run_name: 1, 2, 3
+
+  run:
+    dir: ${out_dir}/${name}/${model_config.name}_always_equispaced_${model_config.always_equispaced}
+  sweep:
+    dir: ${out_dir}/${name}/${model_config.name}_always_equispaced_${model_config.always_equispaced}
+    subdir: num_sim_${data_config.n_train}_run_${run_name}
+
+
+defaults:
+  - _self_
+  - override /launcher: slurm
+  - override /partition: gpu

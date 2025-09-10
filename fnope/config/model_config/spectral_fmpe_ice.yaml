@@ -1,0 +1,31 @@
+name: spectral_FMPE
+
+
+#data representation
+data_representation: "fourier" # "fourier" or "raw", only used for theta atm!
+n_fft_modes: 10 # number of fourier modes to use
+pad_width: 20
+
+
+#model config
+method: "fmpe"
+model_type: "mlp"
+num_blocks: 5 #only used for resnet
+num_layers: 5 #only used for mlp
+hidden_features: 64
+num_freqs: 16
+
+#embedding config
+embedding: "cnn" # "cnn" or "fc"
+embedding_dim: 50
+num_conv_layers: 2
+num_linear_layers: 2
+num_linear_units: 50
+out_channels_per_layer: [6,12]
+kernel_size: 5
+pool_kernel_size: 2
+
+
+# optimization
+batch_size: 200
+learning_rate: 1e-4

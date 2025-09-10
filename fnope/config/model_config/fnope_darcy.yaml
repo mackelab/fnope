@@ -1,0 +1,22 @@
+# model
+name: FNOPE
+
+modes: 32
+conv_channels: 32
+ctx_embedding_channels: 32
+time_embedding_channels: 8
+position_embedding_channels: 8
+num_layers: 5
+always_equispaced: False
+training_point_noise:
+  jitter: 1.0E-3
+  target_gridsize: 2048
+# optimization
+batch_size: 200
+learning_rate: 5e-4
+max_num_epochs: 300
+validation_fraction: 0.1
+stop_after_epochs: 50
+base_dist: gp
+base_dist_lengthscale_multiplier: null
+

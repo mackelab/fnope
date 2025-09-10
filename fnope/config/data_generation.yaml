@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - data_config: generate_linear_gaussian
+  - _self_ # primary config file (THIS) overrides the default config files
+  - override hydra/launcher: submitit_slurm
+
+workspace: slurm
+
+# hydra:
+#   job:
+#     chdir: true
+  

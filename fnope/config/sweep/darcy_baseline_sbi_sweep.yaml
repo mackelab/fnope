@@ -1,0 +1,22 @@
+# @package _global_
+name: darcy_experiment
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model_config: spectral_npe_darcy,raw_fmpe_darcy, spectral_fmpe_darcy
+      data_config.n_train: 100, 1000, 3000, 10000
+      +run_name: 1, 2, 3
+
+  run:
+    dir: ${out_dir}/${name}/${model_config.name}
+  sweep:
+    dir: ${out_dir}/${name}/${model_config.name}
+    subdir: num_sim_${data_config.n_train}_run_${run_name}
+
+
+defaults:
+  - _self_
+  - override /launcher: slurm
+  - override /partition: galvani_a100

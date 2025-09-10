@@ -1,0 +1,9 @@
+# @package _global_
+
+hydra:
+  launcher:
+    timeout_min: 1200
+    partition: a100-galvani
+    gres: gpu
+    cpus_per_task: 4
+    # mem_gb: 40

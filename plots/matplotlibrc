@@ -1,0 +1,31 @@
+font.family         :   sans-serif
+font.sans-serif     :   Arial
+
+font.size           :   8
+legend.fontsize     :   7
+axes.titlesize      :   medium
+axes.labelsize      :   medium
+xtick.labelsize     :   medium
+ytick.labelsize     :   medium
+
+axes.spines.left    :   True 
+axes.spines.bottom  :   True
+axes.spines.top     :   False
+axes.spines.right   :   False
+
+axes.linewidth      :   1
+xtick.major.width   :   1
+xtick.minor.width   :   1
+ytick.major.width   :   1
+ytick.minor.width   :   1
+
+lines.linewidth      :  2.0
+lines.markersize     :  4.0
+
+legend.frameon       :  False
+
+savefig.facecolor    : 'white'
+
+
+
+

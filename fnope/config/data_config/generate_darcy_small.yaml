@@ -1,0 +1,21 @@
+N: 2000
+
+prior_mode: "GP" # or "GP"
+
+# GP prior parameters
+prior_lengthscale: 20
+prior_variance: 2
+prior_min: 0.5
+prior_max: 2
+snr: 100.0
+
+# Darcy_GP prior parameters
+tau: 9.0
+alpha: 2.0
+prior_scale: 2000.0
+
+resolution: 32 # resolution of the grid
+seed: 2025 # random seed: 2025 for data, 2026 for test
+batch_size: 1024
+path: 'darcy'
+data_file: 'darcy_small_train.pkl'

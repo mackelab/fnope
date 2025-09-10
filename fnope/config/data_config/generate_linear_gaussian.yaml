@@ -1,0 +1,8 @@
+N: 10000
+seed: 2025 # random seed: 2025 for data, 2026 for test
+path: 'linear_gaussian'
+data_file: 'linear_gaussian_v0_train.pkl'
+
+# Data generation parameters
+prior_lengthscale: 0.05 # 0.05 for original experiments
+prior_sigma: 1.0 # 1 for orignial expriments 

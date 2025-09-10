@@ -1,0 +1,10 @@
+# evaluation
+num_posterior_samples: 1000
+n_sbc: 100
+n_sbc_marginals: 50
+n_tarp: 100
+n_swd: 100
+n_predictive_samples: 100
+n_predictive_posterior_samples: 10
+n_predictive_posterior_samples_real_data: 100
+
